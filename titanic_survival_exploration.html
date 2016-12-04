@@ -13680,7 +13680,9 @@ Make sure to keep track of the various features and conditions you tried before 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer</strong>: <em>Predictions have an accuracy of 80.02%.</em></p>
+<p><strong>Answer</strong>: *In order to increase accuracy, I took a look at "Pclass" feature as an important value, while "Embarked", "Cabin", "SibSp" and "Parch" features have no meaning in survival prediction. "Fare" may be important, but "Pclass" can absorb the "Fare" feature. I split the condition, "if male Passenger age is less than 10", into two sub conditions, "if male Passenger age is less than 10 and Pclass is less than 3" and "if male Passenger age is less then 16 and Pclass is equal to or greater than 3".</p>
+<p>Also, I got the highest prediction accuracy, when I increased male Passenger's maximum age to 16.</p>
+<p>Predictions have an accuracy of 80.02%.*</p>
 
 </div>
 </div>
@@ -13702,7 +13704,7 @@ Make sure to keep track of the various features and conditions you tried before 
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer</strong>: <em>Replace this text with your answer to the question above.</em></p>
+<p><strong>Answer</strong>: <em>Let's image as a manager in a software company, I want to screen future applicants with their resumes. The company has collected ex-employees performance and their resumes. The outcome variable would be True/False of "Is his preformance review above a specific score?" With the outcome variable, I am able to train an algorithm to predict if future applicants will perform well with reasonable features of their resumes. The two helpful features would be "level of education", "years of industry experience", etc</em></p>
 
 </div>
 </div>

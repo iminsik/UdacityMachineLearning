@@ -13833,7 +13833,7 @@ JEmSJI2NnVOSJEmSJEkam/8CGAR/DyPJuGUAAAAASUVORK5CYII=
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: I choose a graph with max_depth 3. The more training points are added, the slightly lower training score gets. The more training points are added, the higher testing score gets; however, the testing score stops growing at certain point. In general, more training points would benefit model, until growth of testing score is stablized so that testing score is close to training score. </strong></p>
+<p><strong>Answer: I choose a graph with max_depth 3. The more training points are added, the slightly lower training score gets. The more training points are added, the higher testing score gets. Since the training and testing score curves are convering to particular scores, the more training points will benefit the model definitely. </strong></p>
 
 </div>
 </div>
@@ -14615,7 +14615,7 @@ M7MC5mTNzMzMrIA5WTMzMzMrYE7WzMzMzArY/wMezOnrPjHFJwAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: The model trained with max depth 1 can suffer from high bias. The model trained with max depth 10 can suffer from high variance. The visual cue of high bias is that both training score and validation score are low, and that they are close. The visual cue of high variance is that training score is high, which means overfitt to training data, so that the distance from validation score is bigger. </strong></p>
+<p><strong>Answer: The model trained with max depth 1 can suffer from high bias. The model trained with max depth 10 can suffer from high variance. The visual cue of high bias is when training score is low. The visual cue of high variance is that training score is high, which means the model may be overfitt to training data,and validation score is low. </strong></p>
 
 </div>
 </div>
@@ -14688,7 +14688,8 @@ M7MC5mTNzMzMrIA5WTMzMzMrYE7WzMzMzArY/wMezOnrPjHFJwAAAABJRU5ErkJggg==
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: K-fold cross-validation reduces training bias, and optimizes accuracy, by spliting data set into K bins, taking K-1 bins as training set, the rest one bin as testing set, validating training performance cross testing set in K times. K-fold cross-validation guarantees that each bin is tested exactly once during each iteration, and is used exactly K-1 times for training. The scores are aggregated into array so that we can measure the model by proper estimator. </strong></p>
+<p><strong>Answer: K-fold cross-validation reduces training bias, and optimizes accuracy, by spliting data set into K bins, taking K-1 bins as training set, the rest one bin as testing set, validating training performance cross testing set in K times. K-fold cross-validation guarantees that each bin is tested exactly once during each iteration, and is used exactly K-1 times for training. The scores are aggregated into array so that we can measure the model by proper estimator. The average testing score is used for performance.</strong></p>
+<p><strong> Cross validation is useful in combination with grid search, since we can minimize bias and variance with multiple split of training and testing sets. </strong></p>
 
 </div>
 </div>
@@ -14979,7 +14980,8 @@ Predicted selling price for Client 3&#39;s home: $930,490.91
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Answer: \$302,337.50 for Client 1, \$224,342.55 for Client 2, and \$930,490.91 for Client 3 respectively. Yes, they seem reasonable prices. Note that the means of RM, LSTAT, PTRATIO are 6.24, 12.93\%, 18.51\% in Data Explorer. Since Client 1 has has higher LSTAT than mean LSTAT, price may go down. Client 2 has lower than means of all features, price can go much lower. Client 3 has high RM, very low LSTAT and very low PTRATIO, so he deserves almost highest price. </strong></p>
+<p><strong>Answer: \$302,337.50 for Client 1, \$224,342.55 for Client 2, and \$930,490.91 for Client 3 respectively. Yes, they seem reasonable prices. Note that the means of RM, LSTAT, PTRATIO are 6.24, 12.93%, 18.51% in Data Explorer. Since Client 1 has has higher LSTAT than mean LSTAT, price may go down. Client 2 has lower than means of all features, price can go much lower. Client 3 has high RM, very low LSTAT and very low PTRATIO, so he deserves almost highest price. </strong></p>
+<p><strong>The price predictions seems reasonable. For instance, all predicted prices are within min/max of prices in the dataset. The price(\$302,337.50) for Client 1 with most average features is near mean(\$454,342.94) or median(\$438,900.00) price in standard deviation(\$165,171.13). </strong></p>
 
 </div>
 </div>
